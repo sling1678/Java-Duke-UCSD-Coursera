@@ -1,0 +1,14 @@
+#do not include .a file
+*.a
+#no class files
+*.class
+#Or Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Pcakage Files #
+*.jar
+*.war
+*ear
+
+# Virtual machine crash logs 
+hs_err_pid*
