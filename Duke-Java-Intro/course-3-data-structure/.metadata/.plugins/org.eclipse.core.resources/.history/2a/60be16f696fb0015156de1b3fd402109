@@ -1,0 +1,5 @@
+Write the void method testCaesar that has no parameters. This method should read a file and encrypt the complete file using the Caesar Cipher algorithm, printing the encrypted message. You may want to include the lines:
+FileResource fr = new FileResource();
+String message = fr.asString();
+String encrypted = encrypt(message, key);
+System.out.println("key is " + key + "\n" + encrypted);
