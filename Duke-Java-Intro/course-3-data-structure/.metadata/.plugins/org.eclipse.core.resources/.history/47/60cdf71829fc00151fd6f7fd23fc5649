@@ -1,0 +1,34 @@
+/**
+ * 
+ * @author sling
+ *
+ * This assignments:
+ * Write a new class WordLengths that has the following methods
+ * 
+ * Method void countWordLengths(FileReader filename, int[] counts) that reads the file and 
+ * computes the number of words of various lengths. Rules for counting lengths:
+ * (1) ignore first or last character if that is not a letter - this will skip quotes
+ * (2) there would be more complicated rules in a real program, but ignore those complications.
+ * (3) for any words that are larger than the length of array counts[], then count that word 
+ * in the counts[count.length-1] element.
+ * 
+ * Method void testCountWordLengths() should create a FileReader o you can select a file, and 
+ * creates a counts integer array of size 31. This method should call countWordLengths 
+ * with a file and then print the number of words of each length. Test it on the small 
+ * file smallHamlet.txt shown below.
+ * 
+ * Method indexOfMax(int[] values) that returns the index element of the largest element 
+ * in the values. Use this in the testCountWordLengths() to determine the most common word 
+ * length in the file. Test this on file smallHamlet.txt.
+ */
+
+
+
+public class WordLengths {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,19 @@
+/**
+ * Create the CaesarCipher class with the following parts:
+ * Private fields for the alphabet and shiftedAlphabet.
+ * Write a constructor CaesarCipher that has one int parameter key. 
+ * This method should initialize all the private fields of the class.
+ * Write an encrypt method that has one String parameter named input. 
+ * This method returns a String that is the input encrypted using shiftedAlphabet.
+ * Write a decrypt method that has one String parameter named input. 
+ * This method returns a String that is the encrypted String decrypted using the key 
+ * associated with this CaesarCipher object. One way to do this is to create another 
+ * private field mainKey, which is initialized to be the value of key. 
+ * Then you can create a CaesarCipher object within decrypt: 
+ * CaesarCipher cc = new CaesarCipher(26 - mainKey); and call cc.encrypt(input).
+ * @author sling
+ *
+ */
+public class CaesarCipherOOP {
+
+}

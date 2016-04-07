@@ -1,0 +1,66 @@
+/**
+ * Assignment:
+ * Create the TestCaesarCipher class with the following parts:
+ * Include the methods countLetters and maxIndex that you wrote in the previous lesson.
+ * Write the void method simpleTests that has no parameters. 
+ * This method should read in a file as a String, create a CaesarCipher object with key 18, 
+ * encrypt the String read in using the CaesarCipher object, print the encrypted String, 
+ * and decrypt the encrypted String using the decrypt method. 
+ * Write the method breakCaesarCipher that has one String parameter named input. 
+ * This method should figure out which key was used to encrypt this message 
+ * (in a similar manner as the previous lesson), then create a CaesarCipher object 
+ * with that key and decrypt the message.In the simpleTests method, add a call 
+ * to breakCaesarCipher on the encrypted String to decrypt it automatically by 
+ * determining the key, and print the decrypted String.
+ * @author sling
+ *
+ */
+public class TestCaesarCipherOOP {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		CaesarCipherOOP ccOOP = new CaesarCipherOOP(5);
+		String message = "I love you if heeeeeeeeaaaiiiuuaa";
+		String encrypted = ccOOP.encrypt(message);
+		System.out.println("encypted message is " + encrypted);
+		System.out.println("Original message is " + ccOOP.decrypt(encrypted));
+		int keyGuessed = guessKey(encrypted);
+		System.out.println("Key guessed is : " + keyGuessed);
+		CaesarCipherOOP ccBreakCode = new CaesarCipherOOP(keyGuessed);
+		System.out.println("Original message most likely is '" 
+				+ ccBreakCode.decrypt(encrypted) + "'.");
+	}
+	
+	
+	public static int guessKey(String input){
+		int keyGuessed; // We will guess the key by assuming the most common letter is E
+		int [] counts = new int[26]; // 0 to 25 for the 26 letters; initialized to zero automatically
+		String alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		int index = 0;
+		
+		// convert input into all upper case
+		for (int i = 0; i < input.length(); i++){
+			index = alphabets.indexOf(input.toUpperCase().charAt(i)); // value = -1 if not here
+			if (index >= 0) ++counts[index];
+		}// end of for
+		int max = 0;
+		int indexOfMax = 0;
+		for (int i = 0; i < counts.length; i++){
+			if (max < counts[i]) {
+				max = counts[i];
+				indexOfMax = i;
+				// System.out.println("i = " + i + "; max =" + max);
+			}
+		}
+		
+		return keyGuessed = (26 + indexOfMax - 4) % 26;
+		// We guess that most frequent letter is 'e' whose index is 4 in the alphabet.
+		//need to add 26 to take care of circling around.
+	}
+	
+	
+	
+	
+	
+
+}
