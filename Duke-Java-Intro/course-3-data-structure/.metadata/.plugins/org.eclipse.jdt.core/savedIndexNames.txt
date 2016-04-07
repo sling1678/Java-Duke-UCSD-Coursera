@@ -1,5 +1,6 @@
 INDEX VERSION 1.127+/Users/sling/Google Drive/Work/External/cs/git/CourseraJava/Duke-Java-Intro/course-3-data-structure/.metadata/.plugins/org.eclipse.jdt.core
-2640171809.index
 3911501688.index
-1258852346.index
 2974654419.index
+2640171809.index
+3714267776.index
+1258852346.index
